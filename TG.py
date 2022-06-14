@@ -19,7 +19,7 @@ def main():
 	disp = updater.dispatcher
 
 	TG = Bot(token, updater)
-	disp.add_handler(telegram.ext.CommandHandler("start", Bot.start))
+	disp.add_handler(telegram.ext.CommandHandler("start", TG.start))
 
 	updater.start_polling()
 	updater.idle()
